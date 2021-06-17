@@ -8,8 +8,6 @@ void main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  //
-  // FirebaseFirestore.instance.collection("usuarios").doc("001").set({"nome": "Joao"});
 
 
   runApp(MaterialApp(

@@ -34,7 +34,7 @@ class _LoginState extends State<Login> {
         .signInWithEmailAndPassword(
         email: usuario.email, password: usuario.senha)
         .then((firebaseUser) {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Home()));
     }).catchError((error) {
       print("erro app: " + error.toString());
       setState(() {
@@ -49,7 +49,7 @@ class _LoginState extends State<Login> {
     User? usuariologado = auth.currentUser;
 
     if (usuariologado != null) {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Home()));
     }
   }
 
