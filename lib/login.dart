@@ -49,7 +49,11 @@ class _LoginState extends State<Login> {
     User? usuariologado = auth.currentUser;
 
     if (usuariologado != null) {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Home()));
+
+      WidgetsBinding.instance!.addPostFrameCallback((_) {
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Home()));
+      });
+
     }
   }
 
